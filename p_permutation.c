@@ -146,8 +146,8 @@ t_boolean est_permutation_valide(t_permutation ceci){
     }
 }
 
-t_boolean est_inferieur_strict(t_permutation ceci, t_permutation cela){
-    if (est_p_permutation_initialise()) {
+t_boolean est_inferieur_strict(t_permutation ceci, t_permutation cela) {
+    if (est_p_permutation_initialise() && est_permutation_valide(ceci) && est_permutation_valide(cela)) {
         for (int i = 0; i < taille_permutation; i++) {
             if (ceci[i] >= cela[i]) {
                 return FALSE;

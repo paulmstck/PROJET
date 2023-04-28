@@ -15,7 +15,7 @@ void tester_enumeration(){
             printf("permutation invalide\n");
             exit(-1);
         }
-        if(! est_inferieur_strict(ma_permutation_1, ma_permutation_2)){
+        if( est_inferieur_strict(ma_permutation_1, ma_permutation_2)){
             debugger_permutation(ma_permutation_2);
             printf("permutation mal rangee\n");
             exit(-1);
