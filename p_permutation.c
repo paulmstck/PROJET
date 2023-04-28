@@ -1,12 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "p_permutation.h"
 
 static int taille_permutation = 0;
 
-t_boolean initialiser_p_permutation(int taille) {
-    if (taille_permutation == 0) {
+t_boolean initialiser_p_permutation(int taille){
+    if (taille_permutation == 0 && taille > 0){
         taille_permutation = taille;
         return TRUE;
-    } else {
+    }
+    else{
         return FALSE;
     }
 }
@@ -15,11 +18,13 @@ t_boolean est_p_permutation_initialise() {
     return (taille_permutation != 0);
 }
 
-t_boolean donner_taille_permutation(int* taille) {
-    if (est_p_permutation_initialise()) {
+t_boolean donner_taille_permutation(int* taille)
+{
+    if (est_p_permutation_initialise() && taille != NULL){
         *taille = taille_permutation;
         return TRUE;
-    } else {
+    }
+    else{
         return FALSE;
     }
 }
